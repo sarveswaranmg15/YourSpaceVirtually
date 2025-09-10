@@ -25,23 +25,23 @@ export default function Header() {
           <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-brand-600 text-white">
             Y
           </span>
-          YourSpace
+          <div className="leading-tight">
+            <span className="block">YourSpace,</span>
+            <span className="block">
+              Virtually.
+            </span>
+          </div>
         </a>
         <nav className="hidden md:flex items-center gap-1">
           <NavLink active>Home</NavLink>
-          <NavLink>Features</NavLink>
-          <NavLink>Gallery</NavLink>
-          <NavLink>Pricing</NavLink>
+          <NavLink>About</NavLink>
+          <NavLink>Portfolio</NavLink>
+          <NavLink>Service</NavLink>
+          <NavLink>Testimonials</NavLink>
         </nav>
         <div className="hidden md:flex items-center gap-3">
           <a href="#" className="text-sm text-slate-600">
-            Sign in
-          </a>
-          <a
-            href="#"
-            className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-brand-600 text-white text-sm font-medium shadow-card hover:bg-brand-700"
-          >
-            Get Started
+            Contact
           </a>
         </div>
         <button
@@ -66,15 +66,11 @@ export default function Header() {
         <div className="md:hidden border-t border-slate-200">
           <div className="container py-3 grid gap-2">
             <NavLink active>Home</NavLink>
-            <NavLink>Features</NavLink>
-            <NavLink>Gallery</NavLink>
-            <NavLink>Pricing</NavLink>
-            <a
-              href="#"
-              className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-brand-600 text-white text-sm font-medium mt-2"
-            >
-              Get Started
-            </a>
+            <NavLink>About</NavLink>
+            <NavLink>Portfolio</NavLink>
+            <NavLink>Service</NavLink>
+            <NavLink>Testimonials</NavLink>
+            <NavLink>Contact</NavLink>
           </div>
         </div>
       )}
