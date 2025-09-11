@@ -1,65 +1,54 @@
-const features = [
-  {
-    title: "Drag & drop",
-    desc: "Arrange objects in 3D with smart snapping and physics-aware guides.",
-    icon: "M12 6v12m6-6H6",
-  },
-  {
-    title: "Real-time",
-    desc: "Collaborate live with cursors, comments, and presence.",
-    icon: "M5 13l4 4L19 7",
-  },
-  {
-    title: "Templates",
-    desc: "Start fast with pre-built scenes tuned for performance.",
-    icon: "M4 6h16v12H4z",
-  },
-  {
-    title: "Embeds",
-    desc: "Share anywhere with lightweight, responsive embeds.",
-    icon: "M3 12l3-3m0 0l3 3m-3-3v6",
-  },
-];
-
-const Icon = ({ d }) => (
-  <svg
-    className="h-6 w-6 text-brand-600"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    viewBox="0 0 24 24"
-  >
-    <path d={d} strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
-
+import { Star } from "lucide-react";
 export default function Features() {
   return (
-    <section className="py-16 lg:py-24 border-t border-slate-200 bg-slate-50">
-      <div className="container">
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-            Everything to build faster
+    <section className="bg-gradient-to-b from-[#001634] to-[#0049AD] text-white py-16 px-6 m-3 rounded-t-xl">
+      <div className="max-w-5xl mx-auto text-center space-y-8">
+        <div>
+          <h2 className="text-2xl md:text-3xl font-bold">
+            Your Digital Experience Partner
           </h2>
-          <p className="text-slate-600 mt-3">
-            Flexible primitives and smart tools so you can focus on the
-            experience.
+          <p className="mt-2 text-gray-200 max-w-2xl mx-auto">
+            At Your Space, Virtually, we specialize exclusively in the
+            hospitality industry. We understand that first impressions matter,
+            and in today’s digital world, your online presence is often a
+            guest’s first interaction with your brand.
           </p>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((f) => (
-            <div
-              key={f.title}
-              className="rounded-xl border border-slate-200 bg-white p-6 shadow-card"
-            >
-              <div className="h-10 w-10 rounded-lg bg-brand-50 flex items-center justify-center">
-                <Icon d={f.icon} />
-              </div>
-              <h3 className="mt-4 font-semibold text-lg">{f.title}</h3>
-              <p className="text-slate-600 text-sm mt-1">{f.desc}</p>
+
+        {/* Stats Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+          <div>
+            <p className="text-7xl font-black">150+</p>
+            <p className="text-gray-300 text-md">Properties performed</p>
+          </div>
+          <div>
+            <p className="text-7xl font-bold">40%</p>
+            <p className="text-gray-300 text-md">Average Bookings increased</p>
+          </div>
+          <div>
+            <div className="flex justify-center items-end space-x-1 mb-4">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star key={i} className="w-12 h-12 fill-white text-white" />
+              ))}
             </div>
-          ))}
+            <p className="text-gray-300 text-md">
+              Client Satisfaction Increased
+            </p>
+          </div>
         </div>
+
+        {/* Description */}
+        <p className="text-gray-200 max-w-3xl mx-auto">
+          From luxury hotels and boutique resorts to fine dining restaurants and
+          trendy cafés, we create immersive digital experiences that showcase
+          the unique character and atmosphere of your space, driving more
+          bookings and increasing foot traffic.
+        </p>
+
+        {/* Button */}
+        <button className="mt-4 px-6 py-3 bg-white text-black rounded-lg font-bold hover:bg-gray-200 transition">
+          Discover Our Approach
+        </button>
       </div>
     </section>
   );
