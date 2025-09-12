@@ -19,10 +19,6 @@ export default {
         },
       },
 
-      backgroundImage: {
-        "br-gradient": "linear-gradient(to top right, #0049AD, #001634)",
-      },
-
       boxShadow: { card: "0 8px 24px rgba(0,0,0,0.08)" },
       borderRadius: { xl: "1rem" },
       container: {
