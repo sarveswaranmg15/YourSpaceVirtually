@@ -46,7 +46,7 @@ function Services() {
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-white rounded-2xl shadow-xl ring-1 ring-slate-200/70 p-6 text-center transition duration-300 ease-out hover:shadow-2xl hover:ring-slate-300 hover:scale-105"
+            className="bg-white rounded-2xl shadow-xl  p-6 text-center transition duration-300 ease-out hover:shadow-2xl hover:ring-slate-300 hover:scale-105"
           >
             <div className="text-6xl mb-4 drop-shadow-lg">{service.icon}</div>
             <h3 className="text-lg font-bold text-gray-900 mb-2">
