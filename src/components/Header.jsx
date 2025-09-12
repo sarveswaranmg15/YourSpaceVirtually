@@ -22,14 +22,9 @@ export default function Header() {
           href="#"
           className="flex items-center gap-2 font-semibold text-slate-900"
         >
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-brand-600 text-white">
-            Y
-          </span>
           <div className="leading-tight">
             <span className="block">YourSpace,</span>
-            <span className="block">
-              Virtually.
-            </span>
+            <span className="block">Virtually.</span>
           </div>
         </a>
         <nav className="hidden md:flex items-center gap-1">
