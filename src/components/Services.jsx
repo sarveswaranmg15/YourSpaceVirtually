@@ -29,7 +29,7 @@ function Services() {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section id="services" className="py-16 bg-white">
       {/* Header */}
       <div className="text-center max-w-2xl mx-auto mb-12">
         <h2 className="text-3xl font-extrabold text-gray-900">

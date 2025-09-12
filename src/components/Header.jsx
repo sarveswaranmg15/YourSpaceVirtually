@@ -28,15 +28,13 @@ export default function Header() {
           </div>
         </a>
         <nav className="hidden md:flex items-center gap-1">
-          <NavLink>About</NavLink>
+          <NavLink href="#about">About</NavLink>
           <NavLink href="#portfolio">Portfolio</NavLink>
-          <NavLink>Service</NavLink>
-          <NavLink>Testimonials</NavLink>
+          <NavLink href="#services">Service</NavLink>
+          <NavLink href="#testimonials">Testimonials</NavLink>
         </nav>
         <div className="hidden md:flex items-center gap-3">
-          <a href="#" className="text-sm text-slate-600">
-            Contact
-          </a>
+          <NavLink href="#contact">Contact</NavLink>
         </div>
         <button
           onClick={() => setOpen((v) => !v)}
@@ -58,13 +56,13 @@ export default function Header() {
       </div>
       {open && (
         <div className="md:hidden border-t border-slate-200">
-          <div className="container py-3 grid gap-2">
-            <NavLink>About</NavLink>
-            <NavLink href="#portfolio">Portfolio</NavLink>
-            <NavLink>Service</NavLink>
-            <NavLink>Testimonials</NavLink>
-            <NavLink>Contact</NavLink>
-          </div>
+        <div className="container py-3 grid gap-2">
+          <NavLink href="#about">About</NavLink>
+          <NavLink href="#portfolio">Portfolio</NavLink>
+          <NavLink href="#services">Service</NavLink>
+          <NavLink href="#testimonials">Testimonials</NavLink>
+          <NavLink href="#contact">Contact</NavLink>
+        </div>
         </div>
       )}
     </header>
