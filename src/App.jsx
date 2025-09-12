@@ -7,8 +7,7 @@ import Testimonials from "./components/Testimonials.jsx";
 import CTA from "./components/CTA.jsx";
 import Footer from "./components/Footer.jsx";
 import Services from "./components/Services.jsx";
-import PortfolioSection from "./components/PortfolioSection";
-
+import PortfolioSection from "./components/PortfolioSection.jsx";
 
 export default function App() {
   return (
