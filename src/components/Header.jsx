@@ -28,9 +28,8 @@ export default function Header() {
           </div>
         </a>
         <nav className="hidden md:flex items-center gap-1">
-          <NavLink active>Home</NavLink>
           <NavLink>About</NavLink>
-          <NavLink>Portfolio</NavLink>
+          <NavLink href="#portfolio">Portfolio</NavLink>
           <NavLink>Service</NavLink>
           <NavLink>Testimonials</NavLink>
         </nav>
@@ -60,9 +59,8 @@ export default function Header() {
       {open && (
         <div className="md:hidden border-t border-slate-200">
           <div className="container py-3 grid gap-2">
-            <NavLink active>Home</NavLink>
             <NavLink>About</NavLink>
-            <NavLink>Portfolio</NavLink>
+            <NavLink href="#portfolio">Portfolio</NavLink>
             <NavLink>Service</NavLink>
             <NavLink>Testimonials</NavLink>
             <NavLink>Contact</NavLink>

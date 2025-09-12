@@ -1,1 +1,4 @@
 /* Tailwind takes over styling; keep file for component-scoped extras if needed */
+html {
+  scroll-behavior: smooth;
+}
