@@ -22,7 +22,7 @@ export default function Header() {
           href="#"
           className="flex items-center gap-2 font-semibold text-slate-900"
         >
-          <div className="leading-tight">
+          <div className="leading-tight ml-3 sm:ml-4">
             <span className="block">YourSpace,</span>
             <span className="block">Virtually.</span>
           </div>

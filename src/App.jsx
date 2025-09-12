@@ -6,6 +6,7 @@ import Gallery from "./components/Gallery.jsx";
 import Testimonials from "./components/Testimonials.jsx";
 import CTA from "./components/CTA.jsx";
 import Footer from "./components/Footer.jsx";
+import Services from "./components/Services.jsx";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <main className="flex-1">
         <Hero />
         <Features />
+        <Services />
         <Gallery />
         <Testimonials />
         <CTA />
