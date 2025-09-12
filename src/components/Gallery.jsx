@@ -1,43 +1,77 @@
-const images = Array.from({ length: 8 }).map((_, i) => ({ id: i + 1 }));
+import { Heart, Ribbon, Sparkles } from "lucide-react"; // You can swap icons if needed
 
-export default function Gallery() {
+export default function WhyChoose() {
   return (
-    <section className="py-16 lg:py-24">
-      <div className="container">
-        <div className="flex items-end justify-between mb-6">
-          <div>
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
-              Showcase
-            </h2>
-            <p className="text-slate-600">
-              A few scenes built by our community.
-            </p>
+    <section className="bg-gradient-to-b from-[#0049AD] to-[#001634] text-white rounded-xl py-12 px-6 m-3">
+      {/* Heading */}
+      <div className="text-center max-w-3xl mx-auto mb-12">
+        <h2 className="text-3xl md:text-3xl font-bold mb-4">
+          Why Choose Your Space, Virtually?
+        </h2>
+        <p className="text-gray-200 text-md ">
+          We’re not just another digital agency – we’re your hospitality
+          experience partners
+        </p>
+      </div>
+
+      {/* Features */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
+        {/* Card 1 */}
+        <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-6 text-center shadow-lg hover:scale-105 transition-transform duration-300">
+          <div className="w-14 h-14 mx-auto flex items-center justify-center bg-blue-600/40 rounded-full mb-4">
+            <Heart className="w-8 h-8 text-pink-400" />
           </div>
-          <a
-            href="#"
-            className="hidden sm:inline-flex px-4 py-2 rounded-lg border border-slate-300 text-slate-700 text-sm hover:bg-slate-50"
-          >
-            View all
-          </a>
+          <span className="inline-block text-xs font-bold bg-white/70 text-gray-800 px-3 py-1 rounded-full mb-3">
+            Industry Experts
+          </span>
+          <h3 className="text-lg font-semibold mb-2">Hospitality-Focused</h3>
+          <p className="text-gray-200 text-sm">
+            We exclusively serve the hospitality industry, understanding your
+            unique needs and challenges.
+          </p>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {images.map((img) => (
-            <div
-              key={img.id}
-              className="group rounded-xl border border-slate-200 overflow-hidden bg-white shadow-sm"
-            >
-              <div className="aspect-[4/3] bg-gradient-to-br from-slate-100 to-slate-200" />
-              <div className="p-4">
-                <div className="flex items-center justify-between">
-                  <h3 className="font-medium">Scene {img.id}</h3>
-                  <button className="text-brand-600 text-sm hover:underline">
-                    Open
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
+
+        {/* Card 2 */}
+        <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-6 text-center shadow-lg hover:scale-105 transition-transform duration-300">
+          <div className="w-14 h-14 mx-auto flex items-center justify-center bg-blue-600/40 rounded-full mb-4">
+            <Heart className="w-8 h-8 text-pink-400" />
+          </div>
+          <span className="inline-block text-xs font-bold bg-white/70 text-gray-800 px-3 py-1 rounded-full mb-3">
+            Creative Excellence
+          </span>
+          <h3 className="text-lg font-semibold mb-2">Luxury Storytelling</h3>
+          <p className="text-gray-200 text-sm">
+            We craft premium visual narratives that capture the essence and
+            atmosphere of your space.
+          </p>
         </div>
+
+        {/* Card 3 */}
+        <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-6 text-center shadow-lg hover:scale-105 transition-transform duration-300">
+          <div className="w-14 h-14 mx-auto flex items-center justify-center bg-blue-600/40 rounded-full mb-4">
+            <Heart className="w-8 h-8 text-pink-400" />
+          </div>
+          <span className="inline-block text-xs font-bold bg-white/70 text-gray-800 px-3 py-1 rounded-full mb-3">
+            Results Guaranteed
+          </span>
+          <h3 className="text-lg font-semibold mb-2">ROI-Driven Marketing</h3>
+          <p className="text-gray-200 text-sm">
+            Our strategies are designed to increase bookings, drive foot
+            traffic, and maximize your revenue.
+          </p>
+        </div>
+      </div>
+
+      {/* Bottom text */}
+      <div className="text-center max-w-4xl mx-auto">
+        <p className="font-semibold mb-2">
+          Join over 150+ hospitality businesses that have transformed their
+          digital presence with us
+        </p>
+        <p className="text-gray-200 text-md">
+          • Hotels & Resorts &nbsp; • Restaurants & Bars &nbsp; • Event Venues
+          &nbsp; • Spas & Wellness &nbsp; • Cafés & Bistros
+        </p>
       </div>
     </section>
   );
