@@ -2,13 +2,13 @@ import "./App.css";
 import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
 import Features from "./components/Features.jsx";
-import Gallery from "./components/Gallery.jsx";
 import Testimonials from "./components/Testimonials.jsx";
-import CTA from "./components/CTA.jsx";
+import Hospitality from "./components/Hospitality.jsx";
 import Footer from "./components/Footer.jsx";
 import Services from "./components/Services.jsx";
 import PortfolioSection from "./components/PortfolioSection.jsx";
-import HospitalityBanner from "./components/HospitalityBanner.jsx";
+import WhyChoose from "./components/Why.jsx";
+import Book from "./components/Book.jsx";
 
 export default function App() {
   return (
@@ -18,8 +18,8 @@ export default function App() {
         <Hero />
         <Features />
         <Services />
-        <PortfolioSection/>
-        <Gallery />
+        <WhyChoose />
+        <PortfolioSection />
         <Testimonials />
         <HospitalityBanner />
         <CTA />

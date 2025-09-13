@@ -18,6 +18,7 @@ export default {
           950: "#1e1b4b",
         },
       },
+
       boxShadow: { card: "0 8px 24px rgba(0,0,0,0.08)" },
       borderRadius: { xl: "1rem" },
       container: {
