@@ -22,7 +22,7 @@ export default function App() {
         <PortfolioSection />
         <Testimonials />
         <HospitalityBanner />
-        <CTA />
+        <Book />
       </main>
       <Footer />
     </div>
