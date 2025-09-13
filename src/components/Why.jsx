@@ -34,7 +34,7 @@ export default function WhyChoose() {
         {/* Card 2 */}
         <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-6 text-center shadow-lg hover:scale-105 transition-transform duration-300">
           <div className="w-14 h-14 mx-auto flex items-center justify-center bg-blue-600/40 rounded-full mb-4">
-            <Heart className="w-8 h-8 text-pink-400" />
+            <Ribbon className="w-8 h-8 text-red-400" />
           </div>
           <span className="inline-block text-xs font-bold bg-white/70 text-gray-800 px-3 py-1 rounded-full mb-3">
             Creative Excellence
@@ -49,7 +49,7 @@ export default function WhyChoose() {
         {/* Card 3 */}
         <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-6 text-center shadow-lg hover:scale-105 transition-transform duration-300">
           <div className="w-14 h-14 mx-auto flex items-center justify-center bg-blue-600/40 rounded-full mb-4">
-            <Heart className="w-8 h-8 text-pink-400" />
+            <Sparkles className="w-8 h-8 text-pink-400" />
           </div>
           <span className="inline-block text-xs font-bold bg-white/70 text-gray-800 px-3 py-1 rounded-full mb-3">
             Results Guaranteed
