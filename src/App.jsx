@@ -3,7 +3,7 @@ import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
 import Features from "./components/Features.jsx";
 import Testimonials from "./components/Testimonials.jsx";
-import Hospitality from "./components/Hospitality.jsx";
+import HospitalityBanner from "./components/HospitalityBanner.jsx";
 import Footer from "./components/Footer.jsx";
 import Services from "./components/Services.jsx";
 import PortfolioSection from "./components/PortfolioSection.jsx";
