@@ -15,54 +15,54 @@ const NavLink = ({ children, href = "#", active }) => (
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+
   return (
-    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
-      <div className="container flex items-center justify-between h-16">
-        <a
-          href="#"
-          className="flex items-center gap-2 font-semibold text-slate-900"
-        >
-          <div className="leading-tight ml-3 sm:ml-4">
-            <span className="block">YourSpace,</span>
-            <span className="block">Virtually.</span>
-          </div>
-        </a>
-        <nav className="hidden md:flex items-center gap-1">
-          <NavLink href="#about">About</NavLink>
-          <NavLink href="#portfolio">Portfolio</NavLink>
-          <NavLink href="#services">Service</NavLink>
-          <NavLink href="#testimonials">Testimonials</NavLink>
-        </nav>
-        <div className="hidden md:flex items-center gap-3">
-          <NavLink href="#contact">Contact</NavLink>
-        </div>
-        <button
-          onClick={() => setOpen((v) => !v)}
-          className="md:hidden p-2 rounded-lg hover:bg-slate-100"
-          aria-label="Menu"
-        >
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            className="text-slate-700"
-          >
-            <path d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+<header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+  <div className="flex items-center h-16 w-full px-4">
+    {/* Left: Logo */}
+    <a
+      href="#"
+      className="flex items-center gap-2 font-semibold text-slate-900"
+    >
+      <div className="leading-tight ml-3 sm:ml-4">
+        <span className="block">YourSpace,</span>
+        <span className="block">Virtually.</span>
       </div>
+    </a>
+
+    {/* Middle: Nav */}
+    <nav className="hidden md:flex flex-1 justify-center items-center gap-1">
+      <NavLink href="#about">About</NavLink>
+      <NavLink href="#services">Service</NavLink>
+      <NavLink href="#portfolio">Portfolio</NavLink>
+      <NavLink href="#testimonials">Testimonials</NavLink>
+    </nav>
+
+    {/* Right: Contact */}
+    <div className="hidden md:flex items-center gap-3">
+      <NavLink href="#contact">Contact</NavLink>
+    </div>
+
+    {/* Mobile Menu Button */}
+    <button
+      onClick={() => setOpen((v) => !v)}
+      className="md:hidden p-2 rounded-lg hover:bg-slate-100 ml-auto"
+      aria-label="Menu"
+    >
+      ...
+    </button>
+  </div>
+
+      {/* Mobile Nav Menu */}
       {open && (
         <div className="md:hidden border-t border-slate-200">
-        <div className="container py-3 grid gap-2">
-          <NavLink href="#about">About</NavLink>
-          <NavLink href="#portfolio">Portfolio</NavLink>
-          <NavLink href="#services">Service</NavLink>
-          <NavLink href="#testimonials">Testimonials</NavLink>
-          <NavLink href="#contact">Contact</NavLink>
-        </div>
+          <div className="container py-3 grid gap-2">
+            <NavLink href="#about">About</NavLink>
+            <NavLink href="#services">Service</NavLink>
+            <NavLink href="#portfolio">Portfolio</NavLink>
+            <NavLink href="#testimonials">Testimonials</NavLink>
+            <NavLink href="#contact">Contact</NavLink>
+          </div>
         </div>
       )}
     </header>
