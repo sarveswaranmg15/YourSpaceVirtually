@@ -1,8 +1,74 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Book() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    businessType: "",
+    project: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus("");
+
+    // Validate required fields
+    if (!formData.name || !formData.email || !formData.businessType) {
+      setSubmitStatus("Please fill in all required fields.");
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      // Using FormSubmit service to send email
+      const submitFormData = new FormData();
+      submitFormData.append("name", formData.name);
+      submitFormData.append("email", formData.email);
+      submitFormData.append("business_type", formData.businessType);
+      submitFormData.append(
+        "project",
+        formData.project || "No additional details provided"
+      );
+      submitFormData.append(
+        "_subject",
+        "New Virtual Experience Booking Request"
+      );
+      submitFormData.append("_captcha", "false");
+      submitFormData.append("_template", "table");
+
+      const response = await fetch(
+        "https://formsubmit.co/sarveswaranmg@gmail.com",
+        {
+          method: "POST",
+          body: submitFormData,
+        }
+      );
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        setFormData({ name: "", email: "", businessType: "", project: "" });
+      } else {
+        throw new Error("Failed to send email");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      setSubmitStatus("error");
+    }
+
+    setIsSubmitting(false);
+  };
   return (
-    <section className="py-16 bg-white">
+    <section id="book" className="py-16 bg-white scroll-mt-24 md:scroll-mt-28">
       {/* Header */}
       <div className="text-center mb-12">
         <h2 className="text-3xl font-extrabold text-gray-900">
@@ -57,13 +123,37 @@ function Book() {
             <h3 className="text-lg font-bold text-gray-900 mb-6 text-center">
               Get Your Free Consultation
             </h3>
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handleSubmit}>
+              {submitStatus === "success" && (
+                <div className="p-3 bg-green-100 border border-green-400 text-green-700 rounded">
+                  Thank you! Your booking request has been sent successfully.
+                  We'll get back to you within 24 hours.
+                </div>
+              )}
+              {submitStatus === "error" && (
+                <div className="p-3 bg-red-100 border border-red-400 text-red-700 rounded">
+                  Sorry, there was an error sending your request. Please try
+                  again or contact us directly.
+                </div>
+              )}
+              {submitStatus &&
+                typeof submitStatus === "string" &&
+                submitStatus !== "success" &&
+                submitStatus !== "error" && (
+                  <div className="p-3 bg-yellow-100 border border-yellow-400 text-yellow-700 rounded">
+                    {submitStatus}
+                  </div>
+                )}
+
               <div>
                 <label className="block text-sm font-medium text-gray-700">
                   Name <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   className="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                   required
                 />
@@ -75,6 +165,9 @@ function Book() {
                 </label>
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   className="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                   required
                 />
@@ -86,6 +179,9 @@ function Book() {
                 </label>
                 <input
                   type="text"
+                  name="businessType"
+                  value={formData.businessType}
+                  onChange={handleChange}
                   className="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                   required
                 />
@@ -97,13 +193,23 @@ function Book() {
                 </label>
                 <textarea
                   rows="4"
-                  className="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"></textarea>
+                  name="project"
+                  value={formData.project}
+                  onChange={handleChange}
+                  className="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full py-3 px-4 rounded-md text-white font-semibold shadow-md bg-gradient-to-r from-blue-900 to-blue-600 hover:opacity-90 transition">
-                Book your Virtual Experience
+                disabled={isSubmitting}
+                className={`w-full py-3 px-4 rounded-md text-white font-semibold shadow-md transition ${
+                  isSubmitting
+                    ? "bg-gray-400 cursor-not-allowed"
+                    : "bg-gradient-to-r from-blue-900 to-blue-600 hover:opacity-90"
+                }`}
+              >
+                {isSubmitting ? "Sending..." : "Book your Virtual Experience"}
               </button>
             </form>
           </div>

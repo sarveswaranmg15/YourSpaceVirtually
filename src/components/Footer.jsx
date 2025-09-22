@@ -22,41 +22,11 @@ export default function Footer() {
           <div className="text-center ">
             <h4 className="font-bold mb-4">Services</h4>
             <ul className="space-y-2">
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-yellow-300  hover:font-bold transition">
-                  Virtual Tours
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-yellow-300 hover:font-bold transition">
-                  Photography
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-yellow-300 hover:font-bold transition">
-                  Videography
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-yellow-300 hover:font-bold transition">
-                  Digital Marketing
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-yellow-300 hover:font-bold transition">
-                  Web Design
-                </a>
-              </li>
+              <li className="text-gray-200">Virtual Tours</li>
+              <li className="text-gray-200">Photography</li>
+              <li className="text-gray-200">Videography</li>
+              <li className="text-gray-200">Digital Marketing</li>
+              <li className="text-gray-200">Web Design</li>
             </ul>
           </div>
 
@@ -64,48 +34,12 @@ export default function Footer() {
           <div className="text-center">
             <h4 className="font-bold mb-4">Industries</h4>
             <ul className="space-y-2">
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-yellow-300 hover:font-bold transition">
-                  Hotels & Resorts
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-yellow-300 hover:font-bold transition">
-                  Restaurants & Bars
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-yellow-300 hover:font-bold transition">
-                  Event Venues
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-yellow-300 hover:font-bold transition">
-                  Spas & Wellness
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-yellow-300 hover:font-bold transition">
-                  Cafés & Bistros
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-yellow-300 hover:font-bold transition">
-                  Fitness Centers
-                </a>
-              </li>
+              <li className="text-gray-200">Hotels & Resorts</li>
+              <li className="text-gray-200">Restaurants & Bars</li>
+              <li className="text-gray-200">Event Venues</li>
+              <li className="text-gray-200">Spas & Wellness</li>
+              <li className="text-gray-200">Cafés & Bistros</li>
+              <li className="text-gray-200">Fitness Centers</li>
             </ul>
           </div>
         </div>

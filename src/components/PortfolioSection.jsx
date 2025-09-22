@@ -26,7 +26,10 @@ export default function PortfolioSection() {
   ];
 
   return (
-    <section id="portfolio" className="py-16 bg-white">
+    <section
+      id="portfolio"
+      className="py-16 bg-white scroll-mt-24 md:scroll-mt-28"
+    >
       <div className="max-w-6xl mx-auto px-4 text-center">
         <h2 className="text-3xl font-bold mb-2">Our Portfolio</h2>
         <p className="text-gray-600 mb-10">
@@ -38,7 +41,8 @@ export default function PortfolioSection() {
           {portfolioItems.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+              className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition"
+            >
               <img
                 src={item.image}
                 alt={item.title}

@@ -1,7 +1,10 @@
 import { Star } from "lucide-react";
 export default function Features() {
   return (
-    <section className="bg-gradient-to-b from-[#001634] to-[#0049AD] text-white py-16 px-6 m-3 rounded-t-xl">
+    <section
+      id="about"
+      className="bg-gradient-to-b from-[#001634] to-[#0049AD] text-white py-16 px-6 m-3 rounded-t-xl scroll-mt-24 md:scroll-mt-28"
+    >
       <div className="max-w-5xl mx-auto text-center space-y-8">
         <div>
           <h2 className="text-2xl md:text-3xl font-bold">
